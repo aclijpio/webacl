@@ -1,0 +1,23 @@
+#jdbc
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/acl
+    username: aclij
+    password: 1c1155hg
+  jpa:
+    show_sql: true
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  mvc.hiddenmethod.filter.enabled: true
+
+  # user service customize
+
+user:
+  service:
+    default_role: ROLE_USER
+
+jwt:
+  secret: hFNSI1lk3JFOIfdwlkFnasokj312321o1FASDF
+  lifetime: 30m
+
+

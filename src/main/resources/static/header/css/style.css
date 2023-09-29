@@ -1,0 +1,133 @@
+.objects-list {
+    display: inline-flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 400px;
+    position: relative;
+    background: aqua;
+}
+
+.objects-list .labels {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.objects-list .div-wrapper {
+    position: relative;
+    width: 80px;
+    height: 54px;
+}
+
+.objects-list .text-wrapper {
+    position: absolute;
+    width: 120px;
+    height: 54px;
+    top: -1px;
+    left: -20px;
+    font-family: var(--header-text-font-family);
+    font-weight: var(--header-text-font-weight);
+    color: var(--variable-collection-header-text);
+    font-size: var(--header-text-font-size);
+    text-align: center;
+    letter-spacing: var(--header-text-letter-spacing);
+    line-height: var(--header-text-line-height);
+    font-style: var(--header-text-font-style);
+}
+
+.objects-list .search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.objects-list .search-logo {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.objects-list .div {
+    position: relative;
+    width: 60px;
+    height: 52px;
+    margin-top: -1px;
+    font-family: var(--header-text-font-family);
+    font-weight: var(--header-text-font-weight);
+    color: var(--variable-collection-header-text);
+    font-size: var(--header-text-font-size);
+    text-align: center;
+    letter-spacing: var(--header-text-letter-spacing);
+    line-height: var(--header-text-line-height);
+    font-style: var(--header-text-font-style);
+}
+
+.objects-list .right-side {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+.objects-list .favorites {
+    position: relative;
+    align-self: stretch;
+    width: 80px;
+    overflow: hidden;
+}
+
+.objects-list .text-wrapper-2 {
+    position: absolute;
+    width: 155px;
+    height: 64px;
+    top: 2px;
+    left: -38px;
+    font-family: var(--header-text-font-family);
+    font-weight: var(--header-text-font-weight);
+    color: var(--variable-collection-header-text);
+    font-size: var(--header-text-font-size);
+    text-align: center;
+    letter-spacing: var(--header-text-letter-spacing);
+    line-height: var(--header-text-line-height);
+    font-style: var(--header-text-font-style);
+}
+
+.objects-list .settings-logo {
+    position: relative;
+    width: 70px;
+    height: 65px;
+}
+
+.objects-list .authorization {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    background-color: var(--variable-collection-auth-button);
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.objects-list .text-wrapper-3 {
+    position: absolute;
+    height: 31px;
+    top: 4px;
+    left: 12px;
+    font-family: var(--header-text-font-family);
+    font-weight: var(--header-text-font-weight);
+    color: #ffffff;
+    font-size: var(--header-text-font-size);
+    text-align: center;
+    letter-spacing: var(--header-text-letter-spacing);
+    line-height: var(--header-text-line-height);
+    font-style: var(--header-text-font-style);
+}
