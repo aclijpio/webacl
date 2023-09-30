@@ -5,6 +5,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
+import ru.aclij.webacl.chess.dtos.ChessMove;
 
 @Controller
 public class ChessWebSocketController {
@@ -15,19 +16,20 @@ public class ChessWebSocketController {
         this.messagingTemplate = messagingTemplate;
     }
     @MessageMapping("/move")
-    public String move(ChessMove move){
+    @SendTo("/topic/response")
+    public ChessMove move(ChessMove move){
         System.out.println(move.target());
         System.out.println(move.source());  
         //messagingTemplate.convertAndSendToUser(principal.getName(), "/topic/send", "1");
-        return null;
+        return move;
     }
-    @MessageMapping("/start")
+    @MessageMapping("/request/start")
     @SendTo("/topic/send")
     public boolean start(){
 
         return true;
     }
-    @MessageMapping("/surrender")
+    @MessageMapping("/request/surrender")
     @SendTo("/topic/send")
     public boolean surrender(){
 

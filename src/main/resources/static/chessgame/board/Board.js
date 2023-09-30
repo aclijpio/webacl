@@ -1,17 +1,17 @@
 const board = new ChessBoard('board', {
     position: 'start',
-    pieceTheme: "/board/img/chesspieces/{piece}.png",
+    pieceTheme: "/chessgame/board/img/chesspieces/{piece}.png",
     draggable: true,
     showNotation: true,
     onDrop: onDrop
 });
-const socket = new SockJS('/chess')
-const stompClient = Stomp.over(socket)
+const socketChess= new SockJS('/projects/chess')
+const stompClientChess = Stomp.over(socketChess)
 function onDrop(source, target){
     sendMove(source, target)
 }
-stompClient.connect({}, function (frame){
-    stompClient.subscribe('/topic/send', function (response){
+stompClientChess.connect({}, function (frame){
+    stompClientChess.subscribe('/topic/response', function (response){
         const message = JSON.parse(response.body)
         if (message.move){
             const move = message.move
@@ -24,11 +24,11 @@ function sendMove(source, target){
         source: source,
         target: target
     }
-    stompClient.send("/response/move", {}, JSON.stringify(move));
+    stompClientChess.send("/request/move", {}, JSON.stringify(move));
 }
 function startGame(){
-    stompClient.send("/response/start", {})
+    stompClientChess.send("/request/start", {})
 }
 function surrendered(){
-    stompClient.send("response/surrender", {})
+    stompClientChess.send("/request/surrender", {})
 }

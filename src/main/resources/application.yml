@@ -19,5 +19,3 @@ user:
 jwt:
   secret: hFNSI1lk3JFOIfdwlkFnasokj312321o1FASDF
   lifetime: 30m
-
-

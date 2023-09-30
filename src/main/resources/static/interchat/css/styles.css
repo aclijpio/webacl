@@ -1,0 +1,15 @@
+.messages {
+    width: 10rem;
+    height: 15rem;
+    border-radius: 5rem;
+}
+.messages p {
+
+}
+.message {
+    margin: 0.5rem;
+    padding: 0.2rem;
+}
+.send-button {
+
+}
