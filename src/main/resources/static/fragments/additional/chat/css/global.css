@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-lalezar: Lalezar;
+
+  /* Colors */
+  --chat-container-ground: #7c7979;
+  --header-ground: #242424;
+  --chat-block-ground: #d9d9d9;
+  --chat-header-ground: #494949;
+
+  /* Paddings */
+  --padding-3xs: 0.63rem;
+
+  /* Border radiuses */
+  --br-mini: 15px;
+  --br-2xs-8: 10.8px;
+}

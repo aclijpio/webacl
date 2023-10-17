@@ -1,0 +1,19 @@
+body {
+    -webkit-user-drag: none;
+}
+root {
+    /*fonts*/
+    --font-lalezar: Lalezar;
+
+    /*info table*/
+    --time-color-ground-green: #4d6d3d;
+    --time-color-ground-red: #8f3737;
+    --main-info-frame-ground: #c3c3c3;
+    --font-size-31xl: 3.13rem;
+    --info-table-ground: #d9d9d9;
+    --font-color-wrapper-info: #fff;
+
+    /*chessboard*/
+    --chess-container-ground: #d9d9d9;
+
+}

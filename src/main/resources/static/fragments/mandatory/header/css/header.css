@@ -1,0 +1,274 @@
+.logo-icon {
+  position: relative;
+  width: 3.16rem;
+  height: 3.13rem;
+}
+.b {
+  position: absolute;
+  top: calc(50% - 27px);
+  left: calc(50% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 3.38rem;
+}
+.projects-button {
+  align-self: stretch;
+  position: relative;
+  width: 5rem;
+}
+.b2,
+.search-logo-icon {
+  position: relative;
+  flex-shrink: 0;
+}
+.search-logo-icon {
+  width: 1.56rem;
+  height: 1.56rem;
+  overflow: hidden;
+}
+.b2 {
+  width: 3.75rem;
+  height: 3.25rem;
+}
+.b2,
+.b3,
+.labels,
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-button {
+  align-self: stretch;
+  width: 5.31rem;
+  flex-direction: row;
+}
+.b3,
+.labels {
+  position: absolute;
+}
+.labels {
+  top: 0;
+  left: 0.03rem;
+  height: 3.75rem;
+  overflow: hidden;
+  flex-direction: row;
+  gap: 1.25rem;
+}
+.b3 {
+  top: calc(50% - 32px);
+  left: calc(50% - 78px);
+  width: 9.69rem;
+  height: 4rem;
+}
+.favorites {
+  position: relative;
+  width: 5rem;
+  height: 3.75rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.logo-icon1 {
+  position: relative;
+  width: 2.19rem;
+  height: 2.19rem;
+}
+.settings-logo {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.81rem;
+}
+.authorization,
+.b4 {
+  width: 4.38rem;
+  height: 2.5rem;
+}
+.b4 {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 35px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.authorization {
+  position: relative;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-steelblue);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.authorization-container,
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.authorization-container {
+  align-self: stretch;
+  width: 4.69rem;
+  flex-direction: column;
+}
+.right-side {
+  position: absolute;
+  top: 0;
+  right: -0.06rem;
+  width: 16.38rem;
+  height: 3.75rem;
+  flex-direction: row;
+  gap: 1.31rem;
+}
+.objects {
+  position: relative;
+  width: 67.19rem;
+  height: 3.75rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.header-list {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  width: 90rem;
+  height: 3.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.header {
+  position: relative;
+  background-color: var(--color-gray);
+  width: 100%;
+  height: 3.75rem;
+  text-align: center;
+  font-size: var(--header-text-size);
+  color: var(--header-text);
+  font-family: var(--header-text);
+  user-select: none;
+}
+.b5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 22.69rem;
+  height: 4.44rem;
+}
+.password,
+.text-wrapper {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.text-wrapper {
+  width: 22.5rem;
+  height: 4.44rem;
+}
+.password {
+  align-self: stretch;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-darkslategray);
+  height: 4.06rem;
+}
+.login-form-input {
+  width: 22.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-22xl);
+}
+.b6 {
+  position: absolute;
+  top: calc(50% - 32.5px);
+  left: calc(50% - 182px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22.69rem;
+  height: 4.06rem;
+}
+.login-button {
+  position: relative;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-steelblue);
+  width: 22.5rem;
+  height: 4.06rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.game-timer,
+.href {
+  position: absolute;
+  width: 7.5rem;
+  height: 1.25rem;
+}
+.game-timer {
+  top: calc(50% - 10px);
+  left: calc(50% - 60px);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.href {
+  top: 1.25rem;
+  left: 7.5rem;
+}
+.login-form-registration-button {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  color: var(--color-dodgerblue);
+}
+.interactions,
+.login-form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.login-form-buttons {
+  height: 7.81rem;
+}
+.interactions {
+  gap: var(--gap-91xl);
+  text-align: center;
+  font-size: var(--header-text-size);
+  color: var(--header-text);
+}
+.container,
+.login-form {
+  width: 30rem;
+  height: 35.44rem;
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-mid);
+}
+.login-form {
+  position: relative;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-gray);
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--color-darkgray);
+  font-family: var(--header-text);
+}

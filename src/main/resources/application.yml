@@ -8,9 +8,12 @@ spring:
     show_sql: true
     properties:
       dialect: org.hibernate.dialect.PostgreSQLDialect
-  mvc.hiddenmethod.filter.enabled: true
+# user service customize
 
-  # user service customize
+
+unique-id:
+  length: 6
+  characters: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 
 user:
   service:

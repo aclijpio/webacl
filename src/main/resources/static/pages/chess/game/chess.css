@@ -1,0 +1,94 @@
+.chess-container {
+    position: relative;
+    background-color: var(--chess-container-ground);
+    align-items: center;
+    justify-content: center;
+    width: 32rem;
+    height: 32rem;
+}
+.infotable-container {
+    position: relative;
+    background-color: var(--info-table-ground);
+    width: 19rem;
+    height: 32rem;
+    font-size: var(--font-size-31xl);
+    color: var(--info-table-ground);
+}
+.game-timer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19rem;
+    height: 6.25rem;
+    user-select: none;
+}
+
+.infoblock {
+    top: 0;
+    left: 0;
+    background-color: #848484;
+    width: 16.88rem;
+    height: 1.25rem;
+}
+
+.infotable-time {
+    position: absolute;
+    overflow: hidden;
+    top: calc(50% + 155px);
+    left: calc(50% - 150px);
+    background-color: var(--time-color-ground-green);
+    width: 18.75rem;
+    height: 6.25rem;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.main-board-into-frame {
+    position: absolute;
+    top: 7.5rem;
+    left: 0.94rem;
+    background-color: var(--main-info-frame-ground);
+    width: 16.88rem;
+    height: 16.88rem;
+    overflow-y: auto;
+}
+.count,
+.wrapper {
+    position: absolute;
+    width: 1.88rem;
+    height: 1.25rem;
+}
+.count {
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.wrapper {
+    top: 7.5rem;
+    left: 0.94rem;
+    border-right: 2px solid var(--main-info-frame-ground);
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 0.75rem;
+    color: var(--font-color-wrapper-info);
+}
+.chess-container-list {
+    position: relative;
+    width: 100%;
+    height: 40.63rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.63rem;
+    text-align: center;
+    font-size: 0.68rem;
+    color: var(--chess-container-ground);
+    font-family: var(--font-lalezar);
+}

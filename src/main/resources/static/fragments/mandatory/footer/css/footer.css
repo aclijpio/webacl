@@ -1,0 +1,14 @@
+.footer,
+.footer-text {
+    position: absolute;
+    top: 1.25rem;
+    left: 28.25rem;
+}
+.footer {
+    top: 64rem;
+    left: 0.44rem;
+    background-color: var(--footer-ground);
+    width: 90rem;
+    height: 25rem;
+    overflow: hidden;
+}

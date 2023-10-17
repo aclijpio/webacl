@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-lalezar: Lalezar;
+
+  /* font sizes */
+  --font-size-31xl: 3.13rem;
+
+  /* Colors */
+  --chess-container-ground: #d9d9d9;
+  --time-colorred: #8f3737;
+  --main-info-frame-ground: #c3c3c3;
+  --time-color: #4d6d3d;
+}

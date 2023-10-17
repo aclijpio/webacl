@@ -24,8 +24,6 @@ public class AuthService {
     private final JwtTokenUtils jwtTokenUtils;
     private final AuthenticationManager authenticationManager;
     public ResponseEntity<?> createAuthToken(@RequestBody JwtRequest request) {
-        System.out.println(request.getName());
-        System.out.println(request.getPassword());
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                     request.getName(),
@@ -35,6 +33,7 @@ public class AuthService {
             return new ResponseEntity<>(new AppError(HttpStatus.UNAUTHORIZED.value(), "Incorrect login or password"), HttpStatus.UNAUTHORIZED);
         }
         UserDetails userDetails = userService.loadUserByUsername(request.getName());
+
         String token = jwtTokenUtils.generateToken(userDetails);
         return ResponseEntity.ok(new JwtResponse(token));
     }

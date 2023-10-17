@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess</title>
+    <link rel="stylesheet" href="/pages/chess/game/chess.css">
+    <link rel="stylesheet" href="/pages/chess/game/styleguide.css">
+    <dependencies th:insert="~{/fragments/additonal/websocket-depends}"></dependencies>
+</head>
+<header th:insert="~{/fragments/mandatory/header/header}"></header>
+<body>
+    <div class="chess-container-list">
+        <div th:insert="~{/fragments/additonal/chat}"></div>
+        <div class="chess-container"
+             style="justify-content: center;
+                    text-align: center;
+                    align-content: center"
+             th:insert="~{/fragments/additonal/chessboard}"></div>
+        <div th:insert="~{/fragments/additonal/infoboard}"></div>
+    </div>
+</body>
+<footer th:insert="~{/fragments/mandatory/footer}"></footer>
+</html>

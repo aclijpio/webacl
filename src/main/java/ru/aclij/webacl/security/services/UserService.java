@@ -36,7 +36,9 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = findByName(username)
                 .orElseThrow(() -> new UsernameNotFoundException(String.format("User not found with name: '%s'.", username)));
-
+        System.out.println(user.getName());
+        System.out.println(user.getPassword());
+        System.out.println(user.getRoles());
         return new org.springframework.security.core.userdetails.User(
                 user.getName(),
                 user.getPassword(),
