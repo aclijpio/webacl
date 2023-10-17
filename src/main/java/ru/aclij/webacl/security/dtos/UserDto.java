@@ -1,10 +1,12 @@
 package ru.aclij.webacl.security.dtos;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@Data
 @AllArgsConstructor
 public class UserDto {
-    private String user;
-    private String password;
+    private Long id;
+    private String username;
     private String email;
 }

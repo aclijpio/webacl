@@ -8,14 +8,25 @@ spring:
     show_sql: true
     properties:
       dialect: org.hibernate.dialect.PostgreSQLDialect
-  mvc.hiddenmethod.filter.enabled: true
+    hibernate:
+      ddl-auto: update
+# user service customize
 
-  # user service customize
+server:
+  error:
+    whitelabel:
+      enabled : false
+  servlet:
+    session:
+      timeout: 60m
+unique-id:
+  length: 6
+  characters: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
 
 user:
   service:
     default_role: ROLE_USER
 
 jwt:
-  secret: hFNSI1lk3JFOIfdwlkFnasokj312321o1FASDF
+  secret: XcESicxsXBIoIgR+aYcDtn9YGWIIOsH8E892Pce8dGc
   lifetime: 30m

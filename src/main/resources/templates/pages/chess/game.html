@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess</title>
+    <link rel="stylesheet" href="/pages/chess/game/chess.css">
+    <link rel="stylesheet" href="/pages/chess/game/styleguide.css">
+    <dependencies th:insert="~{/fragments/additional/websocket-depends}"></dependencies>
+</head>
+<header th:insert="~{/fragments/mandatory/header/header}"></header>
+<body>
+    <div class="chess-container-list">
+        <div>
+            <link rel="stylesheet" href="/fragments/additional/chat/css/global.css" />
+            <link rel="stylesheet" href="/fragments/additional/chat/css/chat.css" />
+            <link
+                    rel="stylesheet"
+                    href="https://fonts.googleapis.com/css2?family=Lalezar:wght@400&display=swap"
+            />
+            <div class="chat-container">
+                <div class="opened-chat-header">
+                    <div class="chat-header-wrapper">
+                        <img
+                                class="chatbubbles-logo-icon"
+                                alt=""
+                                src="/fragments/additional/chat/img/chatbubbles-logo.svg"
+                        />
+                        <div class="chat">CHAT</div>
+                    </div>
+                </div>
+                <div class="messages"
+                     id="messages-form">
+                    <div th:object="${messages}" th:each="message : ${messages}">
+                        <p th:text="${message.getText()}"></p>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input
+                            class="chat-input"
+                            id="chat-input"
+                            placeholder="Enter your text...">
+                    </input>
+                    <img
+                            class="chat-send-button-icon"
+                            id="chat-send-button"
+                            alt=""
+                            src="/fragments/additional/chat/img/chatsendbutton.svg"
+                    />
+                </div>
+            </div>
+            <script src="/fragments/additional/chat/js/socket-handler.js"></script>
+        </div>
+        <div class="chess-container"
+             style="justify-content: center;
+                    text-align: center;
+                    align-content: center">
+            <link rel="stylesheet" href="/fragments/additional/chessboard/css/chessboard-1.0.0.min.css">
+
+            <div id="board" style="width: 500px" >
+
+            </div>
+            <script src="/fragments/additional/chessboard/js/chessboard-1.0.0.min.js"></script>
+
+        </div>
+        <link rel="stylesheet" href="/fragments/additional/infoboard/global.css" />
+        <link rel="stylesheet" href="/fragments/additional/infoboard/infoboard.css" />
+        <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Lalezar:wght@400&display=swap"
+        />
+        <div class="infotable-container">
+            <div class="first-time">
+                <div class="good-time" id="first-time">10:00:00</div>
+            </div>
+            <div class="main-board-into-frame">
+                <div class="infoblock">
+                    <div class="count">
+                        <div class="div1">1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="second-time">
+                <div class="good-time" id="second-time">10:00:00</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="/fragments/additional/chessboard/board.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<footer th:insert="~{/fragments/mandatory/footer}"></footer>
+</html>

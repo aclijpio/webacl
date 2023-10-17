@@ -3,9 +3,10 @@ package ru.aclij.webacl.security.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+
 @Entity
 @Data
-@Table(name = "Roles")
+@Table(name = "roles")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

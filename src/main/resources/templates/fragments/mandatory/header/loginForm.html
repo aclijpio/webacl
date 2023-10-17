@@ -1,0 +1,25 @@
+<div class="login-form">
+  <div class="container">
+    <div class="text-wrapper">
+      <b class="b5">Войти в аккаунт</b>
+    </div>
+    <div class="interactions">
+      <form th:action="@{/auth}" th:method="POST" class="login-form-input">
+        <input class="input" id="username" name="username" placeholder="Enter your username..."></input>
+        <input class="input" id="password" name="password" placeholder="Enter your password..."></input>
+        <div class="login-form-buttons">
+          <input type="submit" id="login-submit" class="login-button" value="ВОЙТИ">
+          <div class="login-form-registration-button">
+            <div class="href">
+              <div class="game-timer" id="registerButton" >Зарегистрироваться</div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/api/axios-instance.js"></script>
+<script src="/api/auth-service.js"></script>
+<script src="/fragments/mandatory/header/js/loginform-service.js"></script>

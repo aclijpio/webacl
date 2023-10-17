@@ -1,0 +1,119 @@
+.b5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 22.69rem;
+  height: 4.44rem;
+}
+.input,
+.text-wrapper {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.text-wrapper {
+  width: 22.5rem;
+  height: 4.44rem;
+}
+.input {
+  align-self: stretch;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-darkslategray);
+  height: 4.06rem;
+}
+.login-form-input {
+  width: 22.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-22xl);
+}
+.b6 {
+  position: absolute;
+  top: calc(50% - 32.5px);
+  left: calc(50% - 182px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22.69rem;
+  height: 4.06rem;
+}
+.login-button {
+  position: relative;
+  border-radius: var(--br-16xl);
+  background-color: var(--color-steelblue);
+  width: 22.5rem;
+  height: 4.06rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.game-timer,
+.href {
+  position: absolute;
+  width: 7.5rem;
+  height: 1.25rem;
+}
+.game-timer {
+  top: calc(50% - 10px);
+  left: calc(50% - 60px);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.href {
+  top: 1.25rem;
+  left: 7.5rem;
+}
+.login-form-registration-button {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  color: var(--color-dodgerblue);
+}
+.interactions,
+.login-form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.login-form-buttons {
+  height: 7.81rem;
+}
+.interactions {
+  gap: var(--gap-91xl);
+  text-align: center;
+  font-size: var(--header-text-size);
+  color: var(--header-text);
+}
+.container,
+.login-form {
+  width: 30rem;
+  height: 35.44rem;
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-mid);
+}
+.login-form {
+  position: relative;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-gray);
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--color-darkgray);
+  font-family: var(--header-text);
+}
