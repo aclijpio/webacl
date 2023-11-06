@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.aclij.webacl.apps.chess.dtos.GameInfo;
+import ru.aclij.webacl.apps.chess.dtos.SessionGameInfo;
 import ru.aclij.webacl.apps.chess.exceptions.ChessSessionException;
 import ru.aclij.webacl.apps.chess.exceptions.ChessSessionPlayersFullException;
 import ru.aclij.webacl.apps.chess.exceptions.PlayerNotFoundException;
@@ -15,7 +16,6 @@ import ru.aclij.webacl.apps.chess.session.ChessSession;
 import ru.aclij.webacl.apps.chess.session.Player;
 import ru.aclij.webacl.apps.chess.supp.UniqueIdGame;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -36,7 +36,7 @@ public class ChessService {
             throw new ChessSessionPlayersFullException(String.format("Chess session with key {%s} is full", key));
         chessSession.setSecondPlayer(new Player(
                 playerId,
-                !chessSession.getFirstPlayer().isColor(),
+                !chessSession.getFirstPlayer().getBooleanColor(),
                 System.currentTimeMillis()
         ));
         repository.save(chessSession);
@@ -76,11 +76,11 @@ public class ChessService {
         ChessSession chessSession = repository.findByKey(key);
         return chessSession.createGameInfo();
     }
-    public ResponseEntity<?> getGameInfo(String key, HttpSession httpSession){
+    public ResponseEntity<?> getSessionGameInfo(String key, HttpSession httpSession){
         ChessSession chessSession = this.getChessSession(key);
         String sessionId = httpSession.getId();
         if (chessSession.isSessionExists(key) && chessSession.isPlayerExists(sessionId))
-            return ResponseEntity.ok(this.createGameInfo(key));
+            return ResponseEntity.ok(chessSession.createSessionGameInfo(httpSession.getId()));
         return new ResponseEntity<>(new PlayerNotFoundException("Player not found with session id " + sessionId), HttpStatus.BAD_REQUEST);
     }
 

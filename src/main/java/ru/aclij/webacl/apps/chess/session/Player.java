@@ -3,14 +3,11 @@ package ru.aclij.webacl.apps.chess.session;
 import aclij.pio.board.pieces.Piece;
 import aclij.pio.board.pieces.coordinates.Color;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.Calendar;
 
 @Entity
 @Table(name = "players")
-@Data
 @NoArgsConstructor
 public class Player {
 
@@ -19,12 +16,14 @@ public class Player {
     @Column(name = "player_id")
     private Long id;
 
+    @Getter
     @Column(name = "session_id")
     private String sessionId;
 
     @Column(name = "color")
     private boolean color;
 
+    @Getter
     @Column(name = "time")
     private long time;
 
@@ -37,8 +36,16 @@ public class Player {
         return System.currentTimeMillis() - this.time;
     }
     public boolean isPieceOwnedBy(Piece piece){
-        return color && piece.color == Color.WHITE;
+
+        return getColor() == piece.color;
     }
+    public Color getColor() {
+        return color ? Color.WHITE : Color.BLACK;
+    }
+    public boolean getBooleanColor(){
+        return color;
+    }
+
 }
 
 

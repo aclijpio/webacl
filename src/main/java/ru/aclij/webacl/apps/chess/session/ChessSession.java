@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import ru.aclij.webacl.apps.chess.dtos.GameInfo;
 import ru.aclij.webacl.apps.chess.dtos.PlayerInfo;
+import ru.aclij.webacl.apps.chess.dtos.SessionGameInfo;
+import ru.aclij.webacl.apps.chess.exceptions.PlayerNotFoundException;
 
 import java.util.Optional;
 
@@ -21,6 +23,8 @@ public class ChessSession {
 
     @Column(name = "fen_code")
     private String fenCode;
+    @Column(name = "time")
+    private long time;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "first_user_id")
@@ -51,6 +55,14 @@ public class ChessSession {
                 this.fenCode,
                 new PlayerInfo(this.firstPlayer),
                 new PlayerInfo(this.secondPlayer)
+        );
+    }
+    public SessionGameInfo createSessionGameInfo(String sessionId){
+        return new SessionGameInfo(
+                sessionId,
+                createGameInfo(),
+                getPlayerExists(sessionId).orElseThrow(() -> new PlayerNotFoundException("Player not found with sessdion id: " +sessionId)).getColor(),
+                time
         );
     }
 }

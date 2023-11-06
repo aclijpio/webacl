@@ -11,9 +11,8 @@ public class PlayerInfo {
         this.currentTime = currentTime;
         this.color = color;
     }
-
     public PlayerInfo(Player player) {
         this.currentTime = player.getCurrentTime();
-        this.color = player.isColor();
+        this.color = player.getBooleanColor();
     }
 }
