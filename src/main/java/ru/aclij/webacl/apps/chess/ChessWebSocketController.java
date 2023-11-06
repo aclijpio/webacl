@@ -36,10 +36,6 @@ public class ChessWebSocketController {
         ChessGame chessGame = new ChessGame(board);
         ChessMove chessMove = move.toChessMove(board);
         Player player = chessSession.getPlayerExists(sessionId).orElseThrow(() -> new PlayerNotFoundException("Player not found with session id : " + sessionId));
-        System.out.println(player.isPieceOwnedBy(chessMove.getSource(board)));
-        System.out.println(player.getColor());
-        System.out.println(chessMove.getSource(board).color);
-        System.out.println(board.currentPlayerColor);
         if (player.isPieceOwnedBy(chessMove.getSource(board)) && chessGame.move(chessMove)) {
             String fenCode =  chessGame.getBoard().toFen();
             service.updateBoard(key, fenCode);
