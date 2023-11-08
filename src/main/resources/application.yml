@@ -27,6 +27,17 @@ user:
   service:
     default_role: ROLE_USER
 
+logging:
+  level:
+    web: debug
+
 jwt:
   secret: XcESicxsXBIoIgR+aYcDtn9YGWIIOsH8E892Pce8dGc
   lifetime: 30m
+
+chess:
+  websocket:
+    response_url: /topic/response/chess/
+  controller:
+    end_point : /chess/
+

@@ -1,6 +1,5 @@
 package ru.aclij.webacl.security;
 
-import com.auth0.jwt.exceptions.JWTVerificationException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -17,9 +16,9 @@ import java.io.IOException;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
-@Component
+@Component("JwtRequestFilterOnce")
 public class JwtRequestFilter extends OncePerRequestFilter {
-    private final JwtTokenUtils jwtTokenUtils;
+    private final JwtTokenUtils utils;
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String authHeader = request.getHeader("Authorization");
@@ -27,15 +26,15 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         String jwt = null;
         if (authHeader != null && authHeader.startsWith("Bearer ")){
             jwt = authHeader.substring(7);
-                username = jwtTokenUtils.getUserName(jwt);
+                username = utils.getUsername(jwt);
             System.out.println("USER " + username);
-            System.out.println(jwtTokenUtils.getRoles(jwt));
+            System.out.println(utils.getRoles(jwt));
         }
         if (username != null && SecurityContextHolder.getContext() == null){
             UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(
                     username,
                     null,
-                    jwtTokenUtils.getRoles(jwt).stream().map(SimpleGrantedAuthority::new).collect(Collectors.toSet())
+                    utils.getRoles(jwt).stream().map(SimpleGrantedAuthority::new).collect(Collectors.toSet())
             );
             SecurityContextHolder.getContext().setAuthentication(token);
         }

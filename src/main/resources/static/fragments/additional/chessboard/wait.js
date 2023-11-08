@@ -1,6 +1,7 @@
+const id = window.location.pathname.split('/').pop();
 function updatePage() {
     $.ajax({
-        url: '/api/refresh',
+        url: '/chess/' + id,
         success: function(data) {
             $('#content').html(data);
         }
