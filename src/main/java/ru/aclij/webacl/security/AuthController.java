@@ -10,6 +10,8 @@ import ru.aclij.webacl.security.dtos.JwtRequest;
 import ru.aclij.webacl.security.dtos.RegistrationUserDto;
 import ru.aclij.webacl.security.service.AuthService;
 
+import java.security.Principal;
+
 @RestController
 @RequiredArgsConstructor
 public class AuthController {
